@@ -38,7 +38,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-    'trailers_app.apps.TrailersAppConfig'
+    'trailers_app.apps.TrailersAppConfig',
+
+    'crispy_forms',
 ]
 
 MIDDLEWARE = [
@@ -124,3 +126,6 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static")
 ]
+
+# For crispy forms
+CRISPY_TEMPLATE_PACK = 'bootstrap4'

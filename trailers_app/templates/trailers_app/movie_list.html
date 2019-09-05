@@ -4,11 +4,14 @@
     <div class="row">
     {% for movie in movies %}
 
-            <div class="col-md-6 col-lg-4 movie-tile text-center mb-3 pt-3"
-                 data-trailer-youtube-id="{{ movie.get_trailer_id }}"
+            <div class="col-md-6 col-lg-4 text-center mb-3 pt-3">
+                <div class="movie-tile d-block" data-trailer-youtube-id="{{ movie.get_trailer_id }}"
                  data-toggle="modal" data-target="#trailer">
-                <img src="{{ movie.poster_url }}" width="220" height="342">
-                <h2 class="display-5">{{ movie.title }}</h2>
+                    <img src="{{ movie.poster_url }}" width="220" height="342">
+                </div>
+                <a href="{% url 'trailers_app:movie_detail' movie.pk %}">
+                    <h2 class="display-5">{{ movie.title }}</h2>
+                </a>
             </div>
 
     {% endfor %}

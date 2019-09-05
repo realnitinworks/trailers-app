@@ -18,7 +18,7 @@ body {
         height: 100%;
     }
 
-    .movie-tile:hover {
+    .movie-tile img:hover {
         background-color: #EEE;
         cursor: pointer;
     }
@@ -46,6 +46,15 @@ body {
             margin-top: 200px;
             width: 300px;
             height: 300px;
-        }       
+        }
+
+        .movie-detail img{
+             width: 250px;
+             height: 300px;
+        }
+
+        h1.movie-detail-header {
+            font-size: 3.5rem;
+        }
     }
 }

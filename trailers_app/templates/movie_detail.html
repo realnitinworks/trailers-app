@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    {{ movie }} - {{ block.super }}
+{% endblock title %}
+
+{% block content %}
+    <h1 class="movie-detail-header display-3 text-center bg-primary text-white">{{ movie }}</h1>
+    <div class="row mt-5">
+        <div class="col-md-8 col-lg-7 text-center">
+            <div class="movie-tile movie-detail d-block rounded shadow p-3" data-trailer-youtube-id="{{ movie.get_trailer_id }}"
+                 data-toggle="modal" data-target="#trailer">
+                    <img src="{{ movie.poster_url }}" width="400" height="500">
+            </div>
+        </div>
+
+        <div class="col-md-4 col-lg-5">
+            <div class="card mt-5 rounded shadow-lg">
+              <div class="card-body">
+                <p class="card-text lead">{{ movie.plot }}</p>
+                <a href="{% url 'trailers_app:movie_edit' movie.id %}" class="btn btn-warning btn-block text-white">Edit</a>
+                <a href="{% url 'trailers_app:movie_delete' movie.id %}" class="btn btn-danger btn-block">Delete</a>
+              </div>
+            </div>
+        </div>
+    </div>
+{% endblock content %}

@@ -12,6 +12,7 @@
             Trailers
         {% endblock title %}
     </title>
+    <script src="https://kit.fontawesome.com/837650ea61.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Raleway:400,700&display=swap" rel="stylesheet">
     <!--    customized bootstrap stylesheet-->
      <link rel="stylesheet" href="{% static 'css/app.css' %}" media="screen">
@@ -20,12 +21,13 @@
 
     <!--    Navbar begins-->
     <nav class="navbar navbar-expand-md navbar-dark bg-dark">
-      <a class="navbar-brand" href="#">Trailer</a>
+      <a class="navbar-brand" href="{% url 'trailers_app:movie_list' %}"><i class="fas fa-film ml-3 mr-2"></i>Trailer</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
         <div class="navbar-nav">
+          <a class="nav-item nav-link" href="{% url 'trailers_app:movie_new' %}">Add Movie</a>
           <a class="nav-item nav-link" href="#">Login</a>
         </div>
       </div>

@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% load crispy_forms_tags %}
+
+{% block title %}
+    {{ movie }} - {{ block.super }}
+{% endblock title %}
+
+{% block content %}
+    <h1 class="display-3 text-white bg-warning px-3">Update Movie '{{ movie }}'</h1>
+    <form method="post" action="">
+        {% csrf_token %}
+        {{ form|crispy }}
+        <button class="btn btn-warning text-white" type="submit">Update</button>
+    </form>
+{% endblock content %}

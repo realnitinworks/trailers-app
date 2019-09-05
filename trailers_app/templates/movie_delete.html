@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% load crispy_forms_tags %}
+
+{% block title %}
+    {{ movie }} - {{ block.super }}
+{% endblock title %}
+
+{% block content %}
+    <h1 class="display-3 text-white bg-danger px-3">Delete Movie '{{ movie }}'</h1>
+    <form method="post" action="" class="m-5 p-5">
+        {% csrf_token %}
+        <p class="lead">Are you sure you want to delete this movie?</p>
+        <button class="btn btn-danger text-white" type="submit">Confirm</button>
+    </form>
+{% endblock content %}
