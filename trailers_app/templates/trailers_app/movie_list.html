@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="row">
+    {% for movie in movies %}
+
+            <div class="col-md-6 col-lg-4 movie-tile text-center mb-3 pt-3"
+                 data-trailer-youtube-id="{{ movie.get_trailer_id }}"
+                 data-toggle="modal" data-target="#trailer">
+                <img src="{{ movie.poster_url }}" width="220" height="342">
+                <h2 class="display-5">{{ movie.title }}</h2>
+            </div>
+
+    {% endfor %}
+    </div>
+
+{% endblock content %}
