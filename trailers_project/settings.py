@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'trailers_app.apps.TrailersAppConfig',
 
     'crispy_forms',
+    'django_registration',
 ]
 
 MIDDLEWARE = [
@@ -129,3 +130,18 @@ STATICFILES_DIRS = [
 
 # For crispy forms
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+# For django_registration
+ACCOUNT_ACTIVATION_DAYS = 7
+
+# For Login/Logout
+LOGIN_REDIRECT_URL = 'trailers_app:movie_list'
+LOGOUT_REDIRECT_URL = 'trailers_app:movie_list'
+
+# For sending emails using SMTP
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.sendgrid.net'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = os.environ['EMAIL_HOST_USER']
+EMAIL_HOST_PASSWORD = os.environ['EMAIL_HOST_PASSWORD']

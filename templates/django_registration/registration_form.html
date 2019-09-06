@@ -1,0 +1,15 @@
+<!--templates/django_registration/registration_form.html-->
+
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+  <form class="container my-5" action="" method="post">
+    {% csrf_token %}
+    <h1 class="display-2">Sign Up</h1>
+    {{ form|crispy}}
+    <input type="submit" value="Register" class="btn btn-success">
+  </form>
+
+{% endblock content %}
