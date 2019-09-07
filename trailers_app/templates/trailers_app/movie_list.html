@@ -3,7 +3,7 @@
 {% block content %}
     <div class="row">
     {% for movie in movies %}
-
+            {% if movie.author == request.user %}
             <div class="col-md-6 col-lg-4 text-center mb-3 pt-3">
                 <div class="movie-tile d-block" data-trailer-youtube-id="{{ movie.get_trailer_id }}"
                  data-toggle="modal" data-target="#trailer">
@@ -13,7 +13,7 @@
                     <h2 class="display-5">{{ movie.title }}</h2>
                 </a>
             </div>
-
+            {% endif %}
     {% endfor %}
     </div>
 

@@ -64,6 +64,19 @@
     </div>
     <!-- Trailer Video Modal ends -->
 
+    <!-- Welcome page. Display only if user is not authenticated -->
+    {% if not user.is_authenticated %}
+    <div class="container">
+        <div class="jumbotron mt-4">
+          <h1 class="display-4">Welcome to the "Trailers" App</h1>
+          <p class="lead">A web application where you can store trailers of your favorite movies</p>
+          <hr class="my-4">
+          <p>Sit back and enjoy your movie trailers!</p>
+          <a class="btn btn-primary btn-lg" href="{% url 'login' %}" role="button">Sign In</a>
+        </div>
+    </div>
+    {% endif %}
+
     <div class="container mt-5">
         {% block content %}
         {% endblock content %}

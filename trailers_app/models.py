@@ -1,5 +1,6 @@
 import re
 
+from django.contrib.auth import get_user_model
 from django.db import models
 from django.urls import reverse
 
@@ -9,6 +10,12 @@ class Movie(models.Model):
     plot = models.TextField()
     poster_url = models.URLField()
     trailer_url = models.URLField()
+    author = models.ForeignKey(
+        to=get_user_model(),
+        on_delete=models.CASCADE,
+        blank=True,
+        null=True
+    )
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
 
