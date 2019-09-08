@@ -44,6 +44,10 @@ Following are some of the major feratures of the application:
 
 ![UserHomePage](/screenshots/UserHomePage.jpg)
 
+6. Movie Trailer Add Page
+
+![AddMovie](/screenshots/AddMovie.jpg)
+
 6. Playback of trailer in Home Page
 
 ![MoviePlaybackHome](/screenshots/MoviePlaybackHome.jpg)
