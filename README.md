@@ -1,4 +1,4 @@
-# trailers_app
+# :movie_camera: trailers_app :movie_camera:
 
 This project is a web application which allows users to store and play the trailers of their favorite movies. The application is powered by the Django Web Framework and Django's third party applications. It uses the Bootstrap Frontend Framework to nicely render the UI.
 
