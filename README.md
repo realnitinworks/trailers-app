@@ -6,7 +6,7 @@ This project is a web application which allows users to store and play the trail
 
 # Application features
 
-Following are some of the major feratures of the application:
+Following are some of the major features of the application:
 
 1. User Authentication feature - signup(through django-registration's 2-step verification), login and logout
 2. Reset password feature - The reset password link is send to email
